@@ -23,6 +23,10 @@ class NotificationController {
   }
 
   async update(req, res) {
+    /**
+     *Utilizar o metodo abaixo que pesquisa e já atualiza o campo necessário
+     * { new: true } este parametro faz com que retorne já o registro atualizado
+     */
     const notification = await Notification.findByIdAndUpdate(
       req.params.id,
       { read: true },
