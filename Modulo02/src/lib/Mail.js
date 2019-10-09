@@ -37,13 +37,13 @@ class Mail {
   }
 
   sendMail(message) {
-    console.log(message);
-    console.log('E-mail encaminhado');
-    return null;
-    // return this.transporter.sendMail({
-    //   ...mailConfig.default,
-    //   ...message,
-    // });
+    // console.log(message);
+    // console.log('E-mail encaminhado');
+    // return null;
+    return this.transporter.sendMail({
+      ...mailConfig.default,
+      ...message,
+    });
   }
 }
 

@@ -9,6 +9,7 @@ export default {
   default: {
     from: 'Equipe GoBarber <noreply@gobarber.com>',
   },
+  proxy: 'http://10.10.190.25:3128',
 };
 
 /**
