@@ -7,7 +7,6 @@ import File from '../models/File';
 import Notification from '../schemas/Notification';
 
 import Queue from '../../lib/Queue';
-import CancellationEmail from '../jobs/CancellationMail';
 import CancellationMail from '../jobs/CancellationMail';
 
 class AppointmentController {
