@@ -1,4 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
+import { FaStaylinked } from 'react-icons/fa';
 
 export const Container = styled.div`
   max-width: 700px;
@@ -69,4 +70,27 @@ export const SubmitButton = styled.button.attrs(props => ({
         animation: ${rotate} 2s linear infinite;
       }
     `}
+`;
+
+export const List = styled.ul`
+  list-style-image: none;
+  margin-top: 30px;
+
+  li {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /* As linhas que não for a primeira, terá uma formatação diferente */
+    & + li {
+      border-top: 1px solid #eee;
+    }
+
+    a {
+      color: #7159c1;
+      text-decoration: none;
+    }
+  }
 `;
