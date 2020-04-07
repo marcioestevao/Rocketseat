@@ -1,9 +1,24 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import api from '../../services/api';
 
 // import { Container } from './styles';
 
 export default class Repository extends Component {
+  // Proptypes serve para informar ao react o tipo de parametros que está
+  // recebendo
+  // match = é um objeto(shape)
+  // params: = é um objeto(shape)
+  // repository: = é uma string
+
+  static propTypes = {
+    match: PropTypes.shape({
+      params: PropTypes.shape({
+        repository: PropTypes.string,
+      }),
+    }).isRequired,
+  };
+
   state = {
     repository: {},
     issues: [],
