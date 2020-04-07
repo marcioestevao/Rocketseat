@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
-import { Container, Form, SubmitButton, List } from './styles';
+import Container from '../../component/Container';
+import { Form, SubmitButton, List } from './styles';
 
 // A function foi transformada em class para podermos trabalhar com estado
 
