@@ -2,8 +2,8 @@
 /* eslint-disable react/no-unused-state */
 /* eslint-disable react/state-in-constructor */
 import React, { Component } from 'react';
-
 import { FaPlus, FaGithubAlt, FaSpinner } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
 
@@ -91,7 +91,9 @@ export default class Main extends Component {
           {repositories.map(repository => (
             <li key={repository.name}>
               <spam>{repository.name}</spam>
-              <a href="">Detalhes</a>
+              <Link to={`/repository/${encodeURIComponent(repository.name)}`}>
+                Detalhes
+              </Link>
             </li>
           ))}
         </List>
